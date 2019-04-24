@@ -14205,7 +14205,7 @@ Generator(
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load samples from generator, taken while training</span>
@@ -14220,7 +14220,7 @@ Generator(
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">_</span> <span class="o">=</span> <span class="n">view_samples</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">samples</span><span class="p">)</span>
@@ -14269,8 +14269,11 @@ Generator(
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> (Write your answer in this cell)</p>
-
+<p><strong>Answer:</strong> (Write your answer in this cell)
+<strong>1</strong>. I chose my model depth to be 512 as it seems to be the reasonable size, that really worked for me to generate almost same as the original faces.
+<strong>2</strong>. I've chosen to use Binary crossentropy loss with logit which works better for me over least squarred error loss
+<strong>3</strong>. I've chosen my lr = 0.0002 beta2 = 0.9 as recommended in the GAN original paper, but i've decreased beta1 to 0.1 which works better for me than 0.3 or 0.5, and i've chosen to use batch size of 64.</p>
+<h4 id="I-think-I'd-improve-this-model-to-generate-a-non-blury-images-by-training-on-64x64-not-32x32">I think I'd improve this model to generate a non blury images by training on 64x64 not 32x32<a class="anchor-link" href="#I-think-I'd-improve-this-model-to-generate-a-non-blury-images-by-training-on-64x64-not-32x32">&#182;</a></h4><h3 id="I've-made-a-mistake-by-accidently-pressing-ctrl+Enter-on-the-training-output,-I've-lost-them,-I'm-running-of-GPU-time,-so-I-didnt-run-it-again,-Incase-you-can't-see-the-training-outputs">I've made a mistake by accidently pressing ctrl+Enter on the training output, I've lost them, I'm running of GPU time, so I didnt run it again, Incase you can't see the training outputs<a class="anchor-link" href="#I've-made-a-mistake-by-accidently-pressing-ctrl+Enter-on-the-training-output,-I've-lost-them,-I'm-running-of-GPU-time,-so-I-didnt-run-it-again,-Incase-you-can't-see-the-training-outputs">&#182;</a></h3>
 </div>
 </div>
 </div>
